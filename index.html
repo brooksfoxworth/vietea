@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8"/>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@900&display=swap" rel="stylesheet">
+    <title>VieTea Boba - Premium Boba Tea & Drinks</title>
+    <meta name="description" content="VieTea Boba - Your destination for premium boba tea, milk tea, and refreshing beverages. Experience the perfect blend of flavors with our handcrafted drinks made with premium ingredients.">
+    <link href="data:image/x-icon;base64," rel="icon" type="image/x-icon"/>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+
+    <style type="text/tailwindcss">
+        .menu-item-image {
+            @apply w-28 h-28 object-cover rounded-lg flex-shrink-0;
+        }
+    </style>
+
+    <link href="./style.css" rel="stylesheet"/>
+    <link href="./css/custom.css" rel="stylesheet"/>
+</head>
+<body class="bg-[var(--background-color)] text-[var(--text-dark)]">
+<div class="relative flex size-full min-h-screen flex-col justify-between group/design-root overflow-x-hidden">
+
+    <header class="sticky top-0 z-10 bg-[var(--background-color)]/90 backdrop-blur-sm shadow-md">
+        <div class="container mx-auto px-4 py-2 flex justify-between items-center">
+            <div class="flex items-center">
+                <h1 class="text-2xl font-black text-black">VIETEA BOBA</h1>
+            </div>
+            <nav class="hidden md:flex items-center space-x-6">
+                <a href="#" data-page-link="home" class="text-black hover:text-gray-700 font-medium transition-colors">Home</a>
+                <a href="#" data-page-link="menu" class="text-black hover:text-gray-700 font-medium transition-colors">Our Menu</a>
+                <a href="#" data-page-link="about" class="text-black hover:text-gray-700 font-medium transition-colors">Our Story</a>
+                <a href="#" data-page-link="contact" class="text-black hover:text-gray-700 font-medium transition-colors">Contact</a>
+            </nav>
+            <div class="flex items-center space-x-4">
+                <a href="#" data-page-link="order" class="relative text-black hover:text-gray-700 transition-colors">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z" />
+                    </svg>
+                    <span id="cart-count" class="absolute -top-2 -right-2 bg-green-600 text-white text-xs font-bold rounded-full h-5 w-5 flex items-center justify-center">0</span>
+                </a>
+                <button id="mobile-menu-button" class="md:hidden text-black">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <main id="main-content" class="flex-grow">
+        <!-- Hero Section with Logo -->
+        <section class="hero-section relative h-[80vh] min-h-[500px] flex items-center justify-center overflow-hidden">
+            <div class="absolute inset-0 bg-black/30 z-10"></div>
+            <div class="absolute inset-0 bg-cover bg-center" style="background-image: url('./assets/images/hero.webp');"></div>
+            <div class="relative z-20 text-center px-4 max-w-4xl mx-auto">
+                <h1 class="text-5xl md:text-7xl font-black text-pink-700 mb-6 drop-shadow-lg">VIETEA BOBA</h1>
+                <p class="text-xl md:text-2xl text-pink-800 font-medium mb-8">Handcrafted Boba Tea with Premium Ingredients</p>
+                <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                    <a href="#" data-page-link="menu" class="bg-pink-700 hover:bg-pink-800 text-white font-bold py-4 px-8 rounded-full transition-colors shadow-lg hover:shadow-xl">View Our Menu</a>
+                    <a href="#" data-page-link="contact" class="bg-pink-700 hover:bg-pink-800 text-white font-bold py-4 px-8 rounded-full transition-colors shadow-lg hover:shadow-xl">Find Us</a>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Featured Categories -->
+        <section class="py-16 bg-white">
+            <div class="container mx-auto px-4">
+                <div class="text-center mb-16">
+                    <span class="text-pink-600 font-bold text-lg">OUR SPECIALTIES</span>
+                    <h2 class="text-4xl font-black text-gray-900 mt-2">Bubble Tea Perfection</h2>
+                    <div class="w-24 h-1 bg-pink-500 mx-auto mt-4"></div>
+                </div>
+                <div class="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+                    <div class="bg-pink-50 rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow">
+                        <div class="h-48 bg-pink-100 flex items-center justify-center">
+                            <span class="text-7xl">🧋</span>
+                        </div>
+                        <div class="p-8 text-center">
+                            <h3 class="text-2xl font-black text-gray-900 mb-3">Signature Boba</h3>
+                            <p class="text-gray-600">Our house-special boba made with premium tea leaves, fresh milk, and chewy tapioca pearls, perfectly sweetened to order.</p>
+                        </div>
+                    </div>
+                    <div class="bg-pink-50 rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow">
+                        <div class="h-48 bg-pink-100 flex items-center justify-center">
+                            <span class="text-7xl">🍵</span>
+                        </div>
+                        <div class="p-8 text-center">
+                            <h3 class="text-2xl font-black text-gray-900 mb-3">Milk Tea</h3>
+                            <p class="text-gray-600">Creamy and smooth milk tea in classic and unique flavors, brewed fresh throughout the day for optimal taste.</p>
+                        </div>
+                    </div>
+                    <div class="bg-pink-50 rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow">
+                        <div class="h-48 bg-pink-100 flex items-center justify-center">
+                            <span class="text-7xl">🍹</span>
+                        </div>
+                        <div class="p-8 text-center">
+                            <h3 class="text-2xl font-black text-gray-900 mb-3">Fruit Teas</h3>
+                            <p class="text-gray-600">Refreshing fruit-infused teas with real fruit pieces, perfect for those who love a lighter, fruitier option.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Featured Drinks -->
+        <section class="py-16 bg-pink-50">
+            <div class="container mx-auto px-4">
+                <div class="text-center mb-16">
+                    <span class="text-pink-600 font-bold text-lg">CUSTOMER FAVORITES</span>
+                    <h2 class="text-4xl font-black text-gray-900 mt-2">Most Popular Drinks</h2>
+                    <div class="w-24 h-1 bg-pink-500 mx-auto mt-4"></div>
+                </div>
+                <div class="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+                    <div class="bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-transform hover:-translate-y-2">
+                        <div class="h-64 bg-pink-100 flex items-center justify-center">
+                            <span class="text-8xl">🧋</span>
+                        </div>
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold text-gray-900 mb-2">Brown Sugar Boba Milk</h3>
+                            <p class="text-gray-600 mb-4">Creamy milk tea with our signature brown sugar boba pearls, caramelized to perfection.</p>
+                            <div class="flex justify-between items-center">
+                                <span class="text-pink-600 font-bold text-lg">$5.99</span>
+                                <button class="bg-pink-600 hover:bg-pink-700 text-white px-4 py-2 rounded-full text-sm font-medium transition-colors">Add to Cart</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-transform hover:-translate-y-2">
+                        <div class="h-64 bg-pink-100 flex items-center justify-center">
+                            <span class="text-8xl">🍓</span>
+                        </div>
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold text-gray-900 mb-2">Strawberry Matcha Latte</h3>
+                            <p class="text-gray-600 mb-4">Fresh strawberry puree layered with premium matcha and creamy milk.</p>
+                            <div class="flex justify-between items-center">
+                                <span class="text-pink-600 font-bold text-lg">$6.49</span>
+                                <button class="bg-pink-600 hover:bg-pink-700 text-white px-4 py-2 rounded-full text-sm font-medium transition-colors">Add to Cart</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-transform hover:-translate-y-2">
+                        <div class="h-64 bg-pink-100 flex items-center justify-center">
+                            <span class="text-8xl">🥭</span>
+                        </div>
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold text-gray-900 mb-2">Mango Green Tea</h3>
+                            <p class="text-gray-600 mb-4">Refreshing green tea with fresh mango puree and mango popping boba.</p>
+                            <div class="flex justify-between items-center">
+                                <span class="text-pink-600 font-bold text-lg">$5.99</span>
+                                <button class="bg-pink-600 hover:bg-pink-700 text-white px-4 py-2 rounded-full text-sm font-medium transition-colors">Add to Cart</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Us -->
+        <section class="py-16 bg-white">
+            <div class="container mx-auto px-4">
+                <div class="flex flex-col md:flex-row items-center max-w-6xl mx-auto">
+                    <div class="md:w-1/2 mb-10 md:mb-0 md:pr-10">
+                        <div class="bg-pink-100 rounded-2xl p-8">
+                            <span class="text-pink-600 font-bold text-lg">OUR STORY</span>
+                            <h2 class="text-4xl font-black text-gray-900 mt-2 mb-6">More Than Just Boba</h2>
+                            <p class="text-gray-600 mb-6">At VieTea Boba, we believe in crafting the perfect cup of boba tea using only the finest ingredients. Our journey began with a simple mission: to bring authentic, high-quality bubble tea to our community.</p>
+                            <p class="text-gray-600 mb-8">Each drink is carefully prepared with premium tea leaves, fresh milk, and house-made boba pearls, ensuring every sip is a delightful experience.</p>
+                            <a href="#" data-page-link="about" class="inline-block bg-pink-600 hover:bg-pink-700 text-white font-bold py-3 px-6 rounded-full transition-colors">Learn More About Us</a>
+                        </div>
+                    </div>
+                    <div class="md:w-1/2">
+                        <div class="bg-pink-50 rounded-2xl overflow-hidden shadow-lg">
+                            <img src="./assets/images/boba1.webp" alt="Handcrafted boba tea with tapioca pearls" class="w-full h-full object-cover rounded-2xl">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Testimonials -->
+        <section class="py-16 bg-pink-50">
+            <div class="container mx-auto px-4">
+                <div class="text-center mb-16">
+                    <span class="text-pink-600 font-bold text-lg">TESTIMONIALS</span>
+                    <h2 class="text-4xl font-black text-gray-900 mt-2">What Our Customers Say</h2>
+                    <div class="w-24 h-1 bg-pink-500 mx-auto mt-4"></div>
+                </div>
+                <div class="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+                    <div class="bg-white p-8 rounded-2xl shadow-lg">
+                        <div class="flex items-center mb-4">
+                            <div class="text-yellow-400 text-2xl">★★★★★</div>
+                        </div>
+                        <p class="text-gray-600 italic mb-6">"The best boba I've ever had! The brown sugar boba milk is absolutely to die for. Perfect sweetness and the boba is always fresh and chewy."</p>
+                        <div class="flex items-center">
+                            <div class="w-12 h-12 bg-pink-200 rounded-full flex items-center justify-center text-pink-600 font-bold text-xl mr-4">JD</div>
+                            <div>
+                                <h4 class="font-bold text-gray-900">Jamie D.</h4>
+                                <p class="text-sm text-gray-500">Regular Customer</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="bg-white p-8 rounded-2xl shadow-lg">
+                        <div class="flex items-center mb-4">
+                            <div class="text-yellow-400 text-2xl">★★★★★</div>
+                        </div>
+                        <p class="text-gray-600 italic mb-6">"I'm obsessed with their strawberry matcha latte! The balance of flavors is perfect, and the boba is always the right texture. My go-to study spot!"</p>
+                        <div class="flex items-center">
+                            <div class="w-12 h-12 bg-pink-200 rounded-full flex items-center justify-center text-pink-600 font-bold text-xl mr-4">AM</div>
+                            <div>
+                                <h4 class="font-bold text-gray-900">Alex M.</h4>
+                                <p class="text-sm text-gray-500">Local Foodie</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="bg-white p-8 rounded-2xl shadow-lg">
+                        <div class="flex items-center mb-4">
+                            <div class="text-yellow-400 text-2xl">★★★★★</div>
+                        </div>
+                        <p class="text-gray-600 italic mb-6">"The mango green tea is so refreshing! I love that they use real fruit. The staff is always friendly and the shop has such a cute, cozy vibe."</p>
+                        <div class="flex items-center">
+                            <div class="w-12 h-12 bg-pink-200 rounded-full flex items-center justify-center text-pink-600 font-bold text-xl mr-4">TS</div>
+                            <div>
+                                <h4 class="font-bold text-gray-900">Taylor S.</h4>
+                                <div class="text-sm text-gray-500">First-time Visitor</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA Section -->
+        <section class="py-20 bg-gradient-to-r from-pink-500 to-pink-600 text-white">
+            <div class="container mx-auto px-4 text-center">
+                <h2 class="text-4xl font-black mb-6">Ready to Taste the Difference?</h2>
+                <p class="text-xl mb-8 max-w-2xl mx-auto">Visit us today and experience the perfect blend of flavors in every cup.</p>
+                <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                    <a href="#" data-page-link="menu" class="bg-white text-pink-600 hover:bg-gray-100 font-bold py-4 px-8 rounded-full transition-colors shadow-lg hover:shadow-xl">View Full Menu</a>
+                    <a href="#" data-page-link="contact" class="bg-transparent border-2 border-white hover:bg-white/10 font-bold py-4 px-8 rounded-full transition-colors">Find a Location</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+</div>
+
+<!-- Swiper.js CDN - Load before our scripts -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+<!-- Mobile Menu -->
+<div id="mobile-menu" class="fixed inset-0 bg-black/90 z-50 hidden">
+    <div class="flex justify-end p-4">
+        <button id="close-mobile-menu" class="text-white p-2">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+            </svg>
+        </button>
+    </div>
+    <nav class="flex flex-col items-center justify-center h-[80vh] space-y-8">
+        <a href="#" data-page-link="home" class="text-2xl font-black text-white hover:text-gray-300 transition-colors">Home</a>
+        <a href="#" data-page-link="menu" class="text-2xl font-black text-white hover:text-gray-300 transition-colors">Our Menu</a>
+        <a href="#" data-page-link="about" class="text-2xl font-black text-white hover:text-gray-300 transition-colors">Our Story</a>
+        <a href="#" data-page-link="contact" class="text-2xl font-black text-white hover:text-gray-300 transition-colors">Contact</a>
+    </nav>
+</div>
+
+<script>
+    // Mobile menu toggle
+    const mobileMenuButton = document.querySelector('header button');
+    const mobileMenu = document.getElementById('mobile-menu');
+    const closeMobileMenu = document.getElementById('close-mobile-menu');
+    
+    if (mobileMenuButton && mobileMenu && closeMobileMenu) {
+        mobileMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.remove('hidden');
+            document.body.style.overflow = 'hidden';
+        });
+        
+        closeMobileMenu.addEventListener('click', () => {
+            mobileMenu.classList.add('hidden');
+            document.body.style.overflow = '';
+        });
+        
+        // Close menu when clicking on a link
+        document.querySelectorAll('#mobile-menu a').forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+                document.body.style.overflow = '';
+            });
+        });
+    }
+</script>
+
+<!-- Modular JavaScript Files -->
+<script src="./js/menuData.js"></script>
+<script src="./js/pageContent.js"></script>
+<script src="./js/cart.js"></script>
+<script src="./js/pageManager.js"></script>
+<script src="./js/navigation.js"></script>
+<script src="./js/app.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,114 @@
+/* Custom CSS for Earth Cafe */
+
+/* Remove fixed footer/dock */
+footer {
+    position: static !important;
+    background-color: #ffffff;
+    padding: 2rem 0;
+    margin-top: 4rem;
+}
+
+/* Ensure text is black on light backgrounds */
+body {
+    color: #000000;
+}
+
+/* Update text colors for better contrast */
+h1, h2, h3, h4, h5, h6,
+p, li, a, span, div {
+    color: #000000 !important;
+}
+
+/* Update hero section text to be white on dark background */
+.hero-section {
+    color: #ffffff;
+}
+
+.hero-section h1,
+.hero-section h2,
+.hero-section h3,
+.hero-section p,
+.hero-section a {
+    color: #ffffff !important;
+}
+
+/* Update footer text colors */
+footer {
+    color: #000000;
+}
+
+footer h3,
+footer h4,
+footer p,
+footer a,
+footer li {
+    color: #000000 !important;
+}
+
+/* Swiper Carousel Styles */
+.drinks-swiper {
+    width: 100%;
+    padding: 20px 0 60px;
+}
+
+.swiper-slide {
+    height: auto;
+    display: flex;
+    justify-content: center;
+}
+
+.swiper-button-prev,
+.swiper-button-next {
+    color: #DB2777 !important;
+    top: 50% !important;
+    transform: translateY(-50%);
+    width: 40px !important;
+    height: 40px !important;
+    background: white !important;
+    border-radius: 50% !important;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+    display: flex !important;
+    align-items: center;
+    justify-content: center;
+    z-index: 20;
+}
+
+.swiper-button-prev {
+    left: 10px !important;
+}
+
+.swiper-button-next {
+    right: 10px !important;
+}
+
+.swiper-button-prev:after,
+.swiper-button-next:after {
+    font-size: 1.25rem !important;
+    font-weight: bold !important;
+}
+
+.swiper-pagination-bullet {
+    background: #DB2777 !important;
+    opacity: 0.3 !important;
+}
+
+.swiper-pagination-bullet-active {
+    opacity: 1 !important;
+}
+
+/* Update mobile menu text colors */
+#mobile-menu a {
+    color: #ffffff !important;
+}
+
+/* Ensure form inputs have dark text */
+input, textarea, select {
+    color: #000000 !important;
+}
+
+/* Add this to your existing styles or in a style tag in the head */
+:root {
+    --text-dark: #000000;
+    --text-medium: #333333;
+    --text-light: #666666;
+}
