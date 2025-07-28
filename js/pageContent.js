@@ -6,7 +6,7 @@ const PageContent = {
     home: `
         <div id="home-content" class="pb-8">
             <!-- Business Description -->
-            <section class="py-16 bg-white">
+            <section class="py-8 bg-white">
                 <div class="container mx-auto px-4">
                     <div class="flex flex-col lg:flex-row items-center max-w-6xl mx-auto">
                         <div class="lg:w-1/2 lg:pr-12 mb-10 lg:mb-0">
@@ -29,7 +29,7 @@ const PageContent = {
             </section>
 
             <!-- Featured Drinks -->
-            <section class="py-16 bg-pink-50">
+            <section class="py-8 bg-pink-50">
                 <div class="container mx-auto px-4">
                     <div class="text-center mb-12">
                         <span class="text-pink-600 font-bold text-lg">CUSTOMER FAVORITES</span>
