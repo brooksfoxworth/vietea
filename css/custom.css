@@ -112,3 +112,105 @@ input, textarea, select {
     --text-medium: #333333;
     --text-light: #666666;
 }
+
+/* Desktop-specific improvements */
+@media (min-width: 1024px) {
+    /* Better section spacing for desktop */
+    section {
+        margin-bottom: 0;
+    }
+    
+    /* Enhanced card hover effects for desktop */
+    .bg-white.rounded-2xl.overflow-hidden.shadow-lg:hover {
+        transform: translateY(-8px);
+        box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+        transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+    
+    /* Better grid spacing for desktop */
+    .grid.md\:grid-cols-3 {
+        gap: 3rem;
+    }
+    
+    /* Enhanced button spacing and sizing */
+    .rounded-full {
+        transition: all 0.3s ease;
+    }
+    
+    .rounded-full:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+    }
+    
+    /* Better typography hierarchy */
+    h1, h2, h3 {
+        line-height: 1.1;
+    }
+    
+    /* Enhanced container max-widths */
+    .max-w-6xl {
+        max-width: 80rem;
+    }
+    
+    /* Better image aspect ratios */
+    .h-48, .h-64 {
+        transition: all 0.3s ease;
+    }
+    
+    /* Improved navigation spacing */
+    nav a {
+        position: relative;
+        transition: all 0.3s ease;
+    }
+    
+    nav a:hover {
+        transform: translateY(-1px);
+    }
+    
+    /* Enhanced hero section for desktop */
+    .hero-section {
+        background-attachment: fixed;
+        background-size: cover;
+        background-position: center;
+    }
+    
+    /* Better testimonial card spacing */
+    .testimonial-card {
+        padding: 2rem;
+    }
+    
+    /* Enhanced swiper navigation for desktop */
+    .swiper-button-prev,
+    .swiper-button-next {
+        width: 50px !important;
+        height: 50px !important;
+        margin-top: -25px !important;
+    }
+    
+    /* Better form styling for desktop */
+    input, textarea, select {
+        padding: 1rem;
+        font-size: 1.1rem;
+    }
+}
+
+/* Extra large screens (1440px+) */
+@media (min-width: 1440px) {
+    /* Even better spacing for very large screens */
+    .container {
+        padding-left: 2rem;
+        padding-right: 2rem;
+    }
+    
+    /* Enhanced typography for large screens */
+    .text-4xl.lg\:text-5xl.xl\:text-6xl {
+        font-size: 4.5rem;
+        line-height: 1;
+    }
+    
+    /* Better section padding */
+    .py-16.lg\:py-20 {
+        padding-top: 6rem;
+        padding-bottom: 6rem;
+    }
+}

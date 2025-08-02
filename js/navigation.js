@@ -8,58 +8,71 @@ class NavigationManager {
         this.footerLinks = document.querySelectorAll('footer a[data-page-link]');
         this.headerLinks = document.querySelectorAll('header a[data-page-link]');
         this.mobileMenuLinks = document.querySelectorAll('#mobile-menu a[data-page-link]');
+        this.allPageLinks = document.querySelectorAll('a[data-page-link]');
         this.currentPage = 'home';
+        
+        // Initialize event listeners immediately
         this.initializeEventListeners();
+        
+        // Re-initialize after a short delay to catch any dynamically loaded content
+        setTimeout(() => {
+            this.refreshPageLinks();
+        }, 100);
     }
 
     /**
      * Initialize navigation event listeners
      */
     initializeEventListeners() {
-        // Handle footer links
-        this.footerLinks.forEach(link => {
+        // Handle all page links (including CTA buttons, footer, header, mobile menu)
+        this.allPageLinks.forEach(link => {
             link.addEventListener('click', (e) => {
                 e.preventDefault();
                 const page = e.currentTarget.dataset.pageLink;
                 this.navigateToPage(page);
-            });
-        });
-
-        // Handle header navigation links
-        this.headerLinks.forEach(link => {
-            link.addEventListener('click', (e) => {
-                e.preventDefault();
-                const page = e.currentTarget.dataset.pageLink;
-                this.navigateToPage(page);
-                // Close mobile menu if open
+                
+                // Close mobile menu if open (for mobile menu links)
                 const mobileMenu = document.getElementById('mobile-menu');
                 if (mobileMenu && !mobileMenu.classList.contains('hidden')) {
                     mobileMenu.classList.add('hidden');
-                }
-            });
-        });
-
-        // Handle mobile menu links
-        this.mobileMenuLinks.forEach(link => {
-            link.addEventListener('click', (e) => {
-                e.preventDefault();
-                const page = e.currentTarget.dataset.pageLink;
-                this.navigateToPage(page);
-                // Close mobile menu
-                const mobileMenu = document.getElementById('mobile-menu');
-                if (mobileMenu) {
-                    mobileMenu.classList.add('hidden');
+                    document.body.style.overflow = '';
                 }
             });
         });
     }
 
     /**
+     * Refresh page links and re-attach event listeners
+     */
+    refreshPageLinks() {
+        // Re-query all page links to catch any that might have been missed initially
+        this.allPageLinks = document.querySelectorAll('a[data-page-link]');
+        
+        // Remove existing event listeners by cloning and replacing nodes
+        this.allPageLinks.forEach(link => {
+            const newLink = link.cloneNode(true);
+            link.parentNode.replaceChild(newLink, link);
+        });
+        
+        // Re-query after replacement and re-attach event listeners
+        this.allPageLinks = document.querySelectorAll('a[data-page-link]');
+        this.initializeEventListeners();
+    }
+
+    /**
      * Navigate to a specific page
      */
     navigateToPage(page) {
+        console.log('NavigationManager: Navigating to page:', page);
         this.currentPage = page;
-        this.pageManager.loadPage(page);
+        
+        try {
+            this.pageManager.loadPage(page);
+            console.log('NavigationManager: Successfully loaded page:', page);
+        } catch (error) {
+            console.error('NavigationManager: Error loading page:', page, error);
+        }
+        
         this.updateFooterActiveStates(page);
         
         // Scroll to top of the page

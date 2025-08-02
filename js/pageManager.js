@@ -85,23 +85,24 @@ class PageManager {
         }
 
         const headerHTML = `
-            <div class="flex flex-col items-center justify-center py-3 bg-gradient-to-b from-green-800 to-green-900 shadow-md">
+            <div class="flex flex-col items-center justify-center py-3 bg-gradient-to-b from-pink-600 to-pink-700 shadow-md">
                 <div class="flex flex-col items-center">
                     <div class="flex items-center space-x-2 mb-2">
                         <div class="w-8 h-8 bg-white rounded-full flex items-center justify-center">
-                            <span class="text-black text-lg font-black">🌱</span>
+                            <span class="text-pink-600 text-lg font-black">🧋</span>
                         </div>
-                        <h1 class="text-2xl font-black text-white">EARTH CAFE</h1>
+                        <h1 class="text-2xl font-black text-white">VIETEA BOBA</h1>
                     </div>
+                    <p class="text-pink-100 text-sm mb-2">Handcrafted Boba Tea with Premium Ingredients</p>
                     <div class="flex items-center space-x-4">
-                        <a href="tel:555-012-3456" class="text-white text-sm md:text-base font-medium hover:text-yellow-300 transition-colors flex items-center">
+                        <a href="tel:843-516-6867" class="text-white text-sm md:text-base font-medium hover:text-pink-200 transition-colors flex items-center">
                             <svg class="w-4 h-4 md:w-5 md:h-5 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path>
                             </svg>
-                            (252) 555-0123
+                            (843) 516-6867
                         </a>
                         <span class="text-white/60 hidden md:inline">|</span>
-                        <a href="#" onclick="window.PierogiApp.getNavigationManager().navigateToPage('contact')" class="text-white text-sm md:text-base font-medium hover:text-yellow-300 transition-colors hidden md:flex items-center">
+                        <a href="#" onclick="window.PierogiApp.getNavigationManager().navigateToPage('contact')" class="text-white text-sm md:text-base font-medium hover:text-pink-200 transition-colors hidden md:flex items-center">
                             <svg class="w-4 h-4 md:w-5 md:h-5 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path>
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path>
@@ -120,11 +121,21 @@ class PageManager {
      * Get content for a specific page
      */
     getPageContent(page) {
+        console.log('PageManager: Getting content for page:', page);
+        
         if (page === 'menu') {
+            console.log('PageManager: Rendering menu page');
             return this.renderMenuPage();
         }
         
-        return PageContent[page] || PageContent.home;
+        const content = PageContent[page];
+        if (content) {
+            console.log('PageManager: Found content for page:', page);
+            return content;
+        } else {
+            console.log('PageManager: No content found for page:', page, 'falling back to home');
+            return PageContent.home;
+        }
     }
 
     /**
@@ -138,7 +149,7 @@ class PageManager {
             <div id="menu-content" class="container mx-auto px-4 py-8">
                 <div class="text-center mb-8">
                     <h1 class="text-4xl font-bold text-[var(--text-dark)] mb-2">Our Menu</h1>
-                    <p class="text-lg text-[var(--text-medium)]">Fresh, organic, and delicious food at Earth Cafe</p>
+                    <p class="text-lg text-[var(--text-medium)]">Handcrafted boba tea and refreshing beverages at VieTea Boba</p>
                 </div>
                 
                 <nav class="mb-8">
@@ -414,7 +425,7 @@ class PageManager {
                     
                     <p class="text-gray-600 mb-4 flex-1">${item.description}</p>
                     
-                    <button class="add-to-cart-btn w-full bg-green-600 hover:bg-green-700 text-white font-medium py-2 px-4 rounded-lg transition-colors"
+                    <button class="add-to-cart-btn w-full bg-pink-600 hover:bg-pink-700 text-white font-medium py-2 px-4 rounded-lg transition-colors"
                             data-item-id="${item.id}" 
                             data-item-name="${item.name}" 
                             data-item-price="${item.price}">

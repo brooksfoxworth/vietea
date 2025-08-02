@@ -48,10 +48,10 @@ const PageContent = {
                                             <span class="text-8xl">🧋</span>
                                         </div>
                                         <div class="p-6">
-                                            <h3 class="text-xl font-bold text-gray-900 mb-2">Brown Sugar Boba Milk</h3>
-                                            <p class="text-gray-600 mb-4">Creamy milk tea with our signature brown sugar boba pearls, caramelized to perfection.</p>
+                                            <h3 class="text-xl font-bold text-gray-900 mb-2">Brown Sugar Milk Tea</h3>
+                                            <p class="text-gray-600 mb-4">Classic milk tea with brown sugar syrup and chewy tapioca pearls.</p>
                                             <div class="flex justify-between items-center">
-                                                <span class="text-pink-600 font-bold text-lg">$5.99</span>
+                                                <span class="text-pink-600 font-bold text-lg">$6.25</span>
                                                 <button class="bg-pink-600 hover:bg-pink-700 text-white px-4 py-2 rounded-full text-sm font-medium transition-colors">Add to Cart</button>
                                             </div>
                                         </div>
@@ -65,10 +65,10 @@ const PageContent = {
                                             <span class="text-8xl">🍓</span>
                                         </div>
                                         <div class="p-6">
-                                            <h3 class="text-xl font-bold text-gray-900 mb-2">Strawberry Matcha Latte</h3>
-                                            <p class="text-gray-600 mb-4">Fresh strawberry puree layered with premium matcha and creamy milk.</p>
+                                            <h3 class="text-xl font-bold text-gray-900 mb-2">Strawberry Green Milk Tea</h3>
+                                            <p class="text-gray-600 mb-4">Green milk tea with fresh strawberry flavor and your choice of toppings.</p>
                                             <div class="flex justify-between items-center">
-                                                <span class="text-pink-600 font-bold text-lg">$6.49</span>
+                                                <span class="text-pink-600 font-bold text-lg">$6.25</span>
                                                 <button class="bg-pink-600 hover:bg-pink-700 text-white px-4 py-2 rounded-full text-sm font-medium transition-colors">Add to Cart</button>
                                             </div>
                                         </div>
@@ -82,10 +82,10 @@ const PageContent = {
                                             <span class="text-8xl">🥭</span>
                                         </div>
                                         <div class="p-6">
-                                            <h3 class="text-xl font-bold text-gray-900 mb-2">Mango Green Tea</h3>
-                                            <p class="text-gray-600 mb-4">Refreshing green tea with fresh mango puree and mango popping boba.</p>
+                                            <h3 class="text-xl font-bold text-gray-900 mb-2">Mango Green Milk Tea</h3>
+                                            <p class="text-gray-600 mb-4">Green milk tea with tropical mango flavor and creamy texture.</p>
                                             <div class="flex justify-between items-center">
-                                                <span class="text-pink-600 font-bold text-lg">$5.99</span>
+                                                <span class="text-pink-600 font-bold text-lg">$6.25</span>
                                                 <button class="bg-pink-600 hover:bg-pink-700 text-white px-4 py-2 rounded-full text-sm font-medium transition-colors">Add to Cart</button>
                                             </div>
                                         </div>
@@ -96,13 +96,13 @@ const PageContent = {
                                 <div class="swiper-slide">
                                     <div class="bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-all h-full mx-2">
                                         <div class="h-64 bg-pink-100 flex items-center justify-center">
-                                            <span class="text-8xl">🍫</span>
+                                            <span class="text-8xl">🟣</span>
                                         </div>
                                         <div class="p-6">
                                             <h3 class="text-xl font-bold text-gray-900 mb-2">Taro Milk Tea</h3>
-                                            <p class="text-gray-600 mb-4">Creamy taro milk tea with chewy boba pearls and a hint of vanilla.</p>
+                                            <p class="text-gray-600 mb-4">Creamy taro flavored milk tea with a naturally sweet and nutty taste.</p>
                                             <div class="flex justify-between items-center">
-                                                <span class="text-pink-600 font-bold text-lg">$5.99</span>
+                                                <span class="text-pink-600 font-bold text-lg">$6.25</span>
                                                 <button class="bg-pink-600 hover:bg-pink-700 text-white px-4 py-2 rounded-full text-sm font-medium transition-colors">Add to Cart</button>
                                             </div>
                                         </div>
